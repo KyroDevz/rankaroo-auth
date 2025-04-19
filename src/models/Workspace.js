@@ -1,5 +1,5 @@
 // models/Workspace.js
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 
 const WorkspaceSchema = new mongoose.Schema({
   userId: { type: String, required: true }, // Roblox User ID
@@ -7,4 +7,4 @@ const WorkspaceSchema = new mongoose.Schema({
   groupId: { type: String, required: true },
 }, { timestamps: true });
 
-export default mongoose.model("Workspace", WorkspaceSchema);
+module.exports = mongoose.model('Workspace', WorkspaceSchema);
